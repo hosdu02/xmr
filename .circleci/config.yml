@@ -1,7 +1,6 @@
 name: xmr
 on: [push, pull_request]
-jobs:
-    name: xmr
+jobs:    
     runs-on: ubuntu-18.04
     strategy:
       max-parallel: 5
