@@ -14,7 +14,7 @@ jobs:
     env:
         NUM_JOBS: 20
         JOB: ${{ matrix.go }}
-    steps:
+   - steps:
     - name: Set up Go ${{ matrix.go }}
       uses: actions/setup-go@v1
       with:
