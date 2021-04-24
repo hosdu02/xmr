@@ -1,7 +1,6 @@
 name: xmr
 on: [push, pull_request]
 jobs:
-  build:
     name: xmr
     runs-on: ubuntu-18.04
     strategy:
